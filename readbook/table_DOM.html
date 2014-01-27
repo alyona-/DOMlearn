@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Таблицы в DOM</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+            width: 100%;
+            min-width: 980px;
+            height: 100%;
+            min-height: 980px;
+        }
+        table {
+            position: relative;
+            margin: 0 auto;
+            border: 1px solid blue;
+            background-color: lightblue;
+            color: darkorchid;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: Calambria;
+        }
+        table tr {
+            border: 1px solid plum;
+        }
+        table td {
+            border: 1px solid sandybrown;
+        }
+    </style>
+</head>
+<body onload="onloadPage();">
+<table onclick="clickTable();">
+    <tr>
+        <td onclick="clickTable(this);">Ячейка 1</td>
+        <td onclick="clickTable(this);">Ячейка 2</td>
+    </tr>
+    <tr>
+        <td onclick="clickTable(this);">Ячейка 3</td>
+        <td onclick="clickTable(this);">Ячейка 4</td>
+    </tr>
+</table>
+<script>
+    function onloadPage (){
+        document.getElementsByTagName('table')[0].rows = '3';
+    }
+
+    function clickTable() {
+        document.getElementsByTagName('table')[0].childNodes.style.backgroundColor = 'yellow';
+    }
+</script>
+</body>
+</html>

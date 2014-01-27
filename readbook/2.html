@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2  - использование childNodes</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+
+
+<div>Пользователи:</div>
+<ul>
+    <li>Маша</li>
+    <li>Вова</li>
+
+
+    <!--Коментарии -- считается как текстовая нода-->
+
+    <script>
+
+
+        /*childNodes - перечисляет все дочерние узлы и текстовые, даже если это коментарий, все-равно
+        * считается текстовым узлом*/
+        var childNodes = document.body.childNodes;
+
+        for(var i=0; i<childNodes.length;i++){
+            document.write(childNodes[i] + "<br>");
+        }
+    </script>
+</ul>
+</body>
+</html>

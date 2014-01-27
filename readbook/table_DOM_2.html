@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table in Dom</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>Лилия</td>
+        <td>Одуванчик</td>
+    </tr>
+    <tr>
+     <td>Роза</td>
+    <td>Вербена</td>
+    </tr>
+</table>
+<script>
+  var table =  document.body.children[0];
+    document.write(table + "<br>");
+    document.write("Список строк в таблице - "+ table.rows + "<br>");
+
+    var tr = table.children;
+    document.write(tr.rowIndex);
+</script>
+</body>
+</html>

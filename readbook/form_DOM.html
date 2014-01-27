@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>form in DOM</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<!--
+<form>
+    <label for="ten">10</label>
+    <input type="radio" name="age" value="10" id="ten">
+    <br />
+    <label for="twelve">20</label>
+    <input type="radio" name="age" value="20" id="twelve">
+</form> -->
+<!--
+<script>
+    var form = document.forms[0];
+
+    var elems = form.elements.age;
+
+    alert(elems[0].value); //10 , первый input
+</script> -->
+
+<!--Способ 2-->
+
+<form name="myform">
+    <input name="text">
+</form>
+
+<script>
+    var form = document.forms.myform;
+    form.removeChild(form.text); //удаляем этот input
+     alert(form.elements.text); //undefined (так как удален)
+    alert(form.text); //Работает в firefox
+</script>
+</body>
+</html>

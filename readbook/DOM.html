@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>Дерево DOM</title>
+    <meta charset="UTF-8">
+
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            font-size: 30px;
+            color: orange;
+            background-color: #FAEBD7;
+        }
+
+
+        table {
+            border: 1px solid red;
+            background-color:  pink;
+            color:yellow;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            border-radius: 30px;
+            font-size: 100px;
+            font-weight: bold;
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+<script type="text/javascript"></script>
+
+<!--
+node elem - теги узлы
+
+-->
+
+<!--
+все пробелы - пробельные узлы
+коментарии - это ноды коментарии
+текст - это текстовые ноды
+
+-->
+
+
+<table>
+    <tr>
+        <td>
+            1
+        </td>
+    </tr>
+
+
+    Правда о лосях
+    <ol>
+
+        <li>Лось - животное хитрое</li>
+        <!--коментарий-->
+        <li>и коварное</li>
+    </ol>
+</table>
+
+<script type="text/javascript">
+
+    document.body.style.backgroundColor = '#00BFFF';
+    document.getElementsByTagName('ol')[0].style.backgroundColor ='#0000FF';
+    document.getElementsByTagName('ol')[0].style.color = '#483D8B';
+</script>
+</body>
+</html>

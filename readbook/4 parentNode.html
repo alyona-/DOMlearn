@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4 родительский узел</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<div>
+    <h1>Алёна</h1>
+    <h1>Реана</h1>
+    <h1>Настя</h1>
+    <h1>Диана</h1>
+
+</div>
+
+<script>
+   document.write("Родительский узел"+document.getElementsByTagName('h1')[0].parentNode+"<br>");
+   document.write("Имя ноды - "+document.getElementsByTagName('h1')[0].parentNode.nodeName+"<br>");
+   document.write("Первый ребенок в HEAD - "+document.getElementsByTagName('div')[0].firstChild + "<br>"); //в HEAD
+   document.write("Первый ребенок в HEAD- "+document.children[0].firstElementChild + "<br>"); //в HEAD
+   document.write("Первый ребенок имя ноды в HEAD - "+document.children[0].firstChild.nodeName + "<br>");  //HEAD
+
+   document.write("Первый ребенок имя ноды в BODY - "+document.body.children[0].firstChild.nodeName + "<br>");
+  // document.write("Первый ребенок тип ноды в BODY - "+document.body.children[0].firstChild.nodeType + "<br>");
+  // document.write("Первый ребенок значение ноды в BODY - "+document.body.children[0].firstChild.nodeValue + "<br>");
+  // document.write("Первый ребенок nodeKind() ноды в BODY - "+document.body.children[0].firstChild.nodeKind() + "<br>");
+
+    document.write("<br><br><br>");
+
+  document.write(document.getElementsByTagName('div')[0].firstChild + "<br>");
+  document.write(document.getElementsByTagName('div')[0].firstChild.nodeName + "<br>");
+  document.write(document.getElementsByTagName('div')[0].firstChild.nodeType + "<br>");
+  document.write(document.getElementsByTagName('div')[0].firstChild.nodeValue + "<br>");
+
+   document.write("<br><br><br>");
+
+   document.write(document.getElementsByTagName('div')[0].firstElementChild + "<br>");
+   document.write(document.getElementsByTagName('div')[0].firstElementChild.nodeName + "<br>");
+   document.write(document.getElementsByTagName('div')[0].firstElementChild.nodeType + "<br>");
+   document.write(document.getElementsByTagName('div')[0].firstElementChild.nodeValue + "<br>");
+
+
+    document.write("<h1 style='background-color: yellow; color: red;text-align: center;'>Последний дочерний элемент:</h1> ");
+
+    document.write(document.body.children[0].lastChild + "<br>");
+    document.write(document.body.children[0].lastChild.nodeName + "<br>");
+    document.write(document.body.children[0].lastChild.nodeType + "<br>");
+    document.write(document.body.children[0].lastChild.nodeValue + "<br>");
+
+  //  document.write(document.body.children[0].lastChild.appendChild() + "<br>");
+
+    document.write("<h2>Последний дочерний элемент:</h2>");
+
+    document.write(document.body.children[0].lastElementChild + "<br>");
+    document.write(document.body.children[0].lastElementChild.nodeName + "<br>");
+    document.write(document.body.children[0].lastElementChild.nodeType + "<br>");
+    document.write(document.body.children[0].lastElementChild.nodeValue + "<br>");
+
+   /*Позволяет получить значение*/
+    document.write(document.body.children[0].lastElementChild.innerHTML + "<br>");
+    document.write(document.body.children[0].lastElementChild.innerText + "<br>");
+    document.write(document.body.children[0].lastElementChild.outerHTML + "<br>");
+    //document.write(document.body.children[0].lastElementChild + "<br>");
+
+
+    document.write("<h2>Правый сосед : </h2>");
+
+    document.write(document.body.children[0].children[2].nodeName + " ");
+    document.write(document.body.children[0].children[2].innerText + "<br>");
+    document.write("Левый  сосед  - ");
+    document.write(document.body.children[0].children[2].previousElementSibling.nodeName + " ");
+    document.write(document.body.children[0].children[2].previousElementSibling.innerText + "<br>");
+
+    document.write("Правый сосед - ");
+    document.write(document.body.children[0].children[2].nextElementSibling.nodeName + " ");
+    document.write(document.body.children[0].children[2].nextElementSibling.innerText + "<br>");
+
+
+</script>
+</body>
+</html>

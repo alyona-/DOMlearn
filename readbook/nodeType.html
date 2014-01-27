@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NodeType</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>Читатели:</div>
+<ul>
+    <li>Вася</li>
+    <li>Петя</li>
+</ul>
+<!--Сво1ства узлов, тип, тег , содержимое и другое-->
+<script>
+    var childNodes = document.body.childNodes;
+    for(var i=0; i<childNodes.length; i++){
+
+        //отфильтровать не элементы
+        if(childNodes[i].nodeType !=1) continue;
+        alert(childNodes[i]);
+    }
+</script>
+</body>
+</html>

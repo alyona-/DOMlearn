@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3 использование children</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+
+
+<div>Пользователи:</div>
+<ul>
+    <li>Маша</li>
+    <li>Вова</li>
+
+
+    <!--Коментарии -- считается как текстовая нода-->
+
+    <script>
+
+
+        /*children - перечисляет только дочерние узлы, без учета текстовых, будет
+        * выводить не все узлы, а только узлы элементы*/
+        var children = document.body.children;
+
+        for(var i=0; i<children.length;i++){
+            document.write(children[i] + "<br>"); //DIV, UL, SCRIPT
+        }
+    </script>
+</ul>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>проверка на пустоту в DOm</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<ul>
+    <li>алёна</li>
+    <li></li>
+    <li>оооо</li>
+    <li></li>
+    <li>ее</li>
+</ul>
+
+
+<script>
+   var spisok = document.body.children[0];
+
+   /*
+   //Выводит все элементы и текстовые ноды тоже
+    for(var i=0; i<spisok.childNodes.length; i++) {
+        document.write(spisok.childNodes[i] + "<br>");
+    }
+
+   */
+
+
+    document.write("<br><br>");
+
+
+   //Выводит только узлы элементы
+    for(var i=0; i<spisok.children.length; i++) {
+        document.write(spisok.children[i] +"<br>");
+
+        if(!spisok.childNodes[i].length) { /*Если нет длины у ноды  --- значит элемент пуст*/
+            document.write("Элемент "+i+" пуст.<br>");
+        }
+    }
+
+
+</script>
+</body>
+</html>
